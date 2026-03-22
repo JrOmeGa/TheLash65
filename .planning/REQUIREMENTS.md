@@ -10,7 +10,7 @@
 - [x] **AUTH-01**: Client can sign up and log in via Google SSO
 - [x] **AUTH-02**: Client can sign up and log in via Facebook SSO
 - [x] **AUTH-03**: Client session persists across browser refresh
-- [ ] **AUTH-04**: Only authenticated clients can submit a booking
+- [x] **AUTH-04**: Only authenticated clients can submit a booking
 
 ### Booking
 
@@ -34,7 +34,7 @@
 - [ ] **ADMIN-03**: Owner can cancel a booking
 - [ ] **ADMIN-04**: Owner can set recurring weekly availability (open hours per day)
 - [ ] **ADMIN-05**: Owner can block specific dates or time slots (exceptions)
-- [ ] **ADMIN-06**: Admin pages are protected — only the owner can access them
+- [x] **ADMIN-06**: Admin pages are protected — only the owner can access them
 
 ### Public Site
 
@@ -96,7 +96,7 @@
 | AUTH-01 | Phase 2 | Complete |
 | AUTH-02 | Phase 2 | Complete |
 | AUTH-03 | Phase 2 | Complete |
-| AUTH-04 | Phase 2 | Pending |
+| AUTH-04 | Phase 2 | Complete |
 | BOOK-01 | Phase 3 | Pending |
 | BOOK-02 | Phase 3 | Pending |
 | BOOK-03 | Phase 3 | Pending |
@@ -111,7 +111,7 @@
 | ADMIN-03 | Phase 6 | Pending |
 | ADMIN-04 | Phase 3 | Pending |
 | ADMIN-05 | Phase 3 | Pending |
-| ADMIN-06 | Phase 2 | Pending |
+| ADMIN-06 | Phase 2 | Complete |
 | SITE-01 | Phase 1 | Complete |
 | SITE-02 | Phase 1 | Complete |
 | SITE-03 | Phase 1 | Complete |

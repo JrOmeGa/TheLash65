@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-stopped_at: Completed 02-authentication/02-01-PLAN.md
-last_updated: "2026-03-22T18:20:09.506Z"
+stopped_at: Completed 02-authentication/02-02-PLAN.md
+last_updated: "2026-03-22T18:25:27.416Z"
 progress:
   total_phases: 6
-  completed_phases: 1
+  completed_phases: 2
   total_plans: 7
-  completed_plans: 6
+  completed_plans: 7
 ---
 
 # Project State
@@ -51,6 +51,7 @@ Plan: 2 of 2
 | Phase 01-foundation P03 | 8 minutes | 2 tasks | 6 files |
 | Phase 01-foundation P04 | 5 minutes | 3 tasks | 12 files |
 | Phase 02-authentication P01 | 10min | 2 tasks | 6 files |
+| Phase 02-authentication P02 | 3min | 3 tasks | 10 files |
 
 ## Accumulated Context
 
@@ -76,6 +77,9 @@ Recent decisions affecting current work:
 - [Phase 02-authentication]: cookieCache NOT used in auth.ts — ensures sessions persist via DB lookup on every RSC request (AUTH-03)
 - [Phase 02-authentication]: proxy.ts uses pathname.startsWith('/api/') function guard to prevent OAuth redirect_uri_mismatch from locale prefix injection
 - [Phase 02-authentication]: drizzleAdapter usePlural:true aligns Better Auth table names with existing pluralized Drizzle table definitions
+- [Phase 02-authentication]: UserAvatar placed in Header right-side div after LocaleSwitcher — visible on all screen sizes without modifying MobileDrawer
+- [Phase 02-authentication]: lucide-react installed as dependency — required by plan for User icon fallback in avatar, was missing from project
+- [Phase 02-authentication]: Admin layout redirect not in try/catch — Next.js redirect() throws NEXT_REDIRECT internally; catch blocks would absorb the throw and break redirection
 
 ### Pending Todos
 
@@ -89,6 +93,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-22T18:20:09.503Z
-Stopped at: Completed 02-authentication/02-01-PLAN.md
+Last session: 2026-03-22T18:25:27.413Z
+Stopped at: Completed 02-authentication/02-02-PLAN.md
 Resume file: None
