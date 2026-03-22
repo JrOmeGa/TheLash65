@@ -21,7 +21,7 @@ Clients can book lash extension appointments online and pay via PromptPay, repla
 ### Active
 - [ ] Client can select available date and time slot from calendar
 - [ ] Client can select service type and see cost
-- [ ] Client must log in via SSO (Facebook/Google/Line) to confirm booking
+- [x] Client must log in via SSO (Facebook/Google/Line) to confirm booking — Validated in Phase 02: Authentication
 - [ ] Client sees PromptPay QR code and can download the image
 - [ ] Shop owner can confirm payment received to finalize booking
 - [ ] Client receives email confirmation of booking
@@ -82,4 +82,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-03-22 after Phase 01 (Foundation) complete — public pages, bilingual routing, and DB schema deployed*
+*Last updated: 2026-03-23 after Phase 02 (Authentication) complete — Better Auth 1.5.x wired with Google + Facebook SSO, booking sign-in step, header avatar, admin route protection deployed*
