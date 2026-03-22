@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  /* Color palette — Champagne Minimalist */
+  --color-surface: #fff8f5;
+  --color-surface-container-low: #f5ede6;
+  --color-surface-container-lowest: #ffffff;
+  --color-accent: #755944;
+  --color-accent-light: #9c7660;
+  --color-on-surface: #1F1B18;
+  --color-destructive: #b91c1c;
+
+  /* Font stacks */
+  --font-heading: var(--font-noto-serif), var(--font-sarabun), serif;
+  --font-body: var(--font-manrope), var(--font-sarabun), sans-serif;
+}
+
+/* Base overrides */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+  font-family: var(--font-body);
+}
+
+/* Never use #000000 for text — all text uses --color-on-surface */
+* {
+  color: inherit;
+}
+
+/* Shadow utilities */
+.shadow-ambient {
+  box-shadow: 0 10px 40px rgba(31, 27, 24, 0.06);
+}
+
+.shadow-elevated {
+  box-shadow: 0 16px 48px rgba(31, 27, 24, 0.10);
+}
+
+.shadow-floating {
+  box-shadow: 0 10px 40px rgba(31, 27, 24, 0.18);
+}
