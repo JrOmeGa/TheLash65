@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-stopped_at: Completed 01-foundation/01-04-PLAN.md
-last_updated: "2026-03-22T14:57:02.786Z"
+stopped_at: Completed 02-authentication/02-01-PLAN.md
+last_updated: "2026-03-22T18:20:09.506Z"
 progress:
   total_phases: 6
   completed_phases: 1
-  total_plans: 5
-  completed_plans: 5
+  total_plans: 7
+  completed_plans: 6
 ---
 
 # Project State
@@ -19,12 +19,12 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-22)
 
 **Core value:** Clients can book lash extension appointments online and pay via PromptPay, replacing manual scheduling over chat.
-**Current focus:** Phase 01 — foundation
+**Current focus:** Phase 02 — authentication
 
 ## Current Position
 
-Phase: 2
-Plan: Not started
+Phase: 02 (authentication) — EXECUTING
+Plan: 2 of 2
 
 ## Performance Metrics
 
@@ -50,6 +50,7 @@ Plan: Not started
 | Phase 01-foundation P02 | 3 | 2 tasks | 13 files |
 | Phase 01-foundation P03 | 8 minutes | 2 tasks | 6 files |
 | Phase 01-foundation P04 | 5 minutes | 3 tasks | 12 files |
+| Phase 02-authentication P01 | 10min | 2 tasks | 6 files |
 
 ## Accumulated Context
 
@@ -72,6 +73,9 @@ Recent decisions affecting current work:
 - [Phase 01-foundation]: NavLink active state derived from usePathname comparison — no additional state needed
 - [Phase 01-foundation]: Lazy DB proxy in src/db/index.ts defers postgres() URL parsing to first query — prevents build-time failure when DATABASE_URL contains placeholder values
 - [Phase 01-foundation]: ServiceCard category label hardcoded as Lash Extension / ต่อขนตา — no category table in v1 schema; to be wired if categories added later
+- [Phase 02-authentication]: cookieCache NOT used in auth.ts — ensures sessions persist via DB lookup on every RSC request (AUTH-03)
+- [Phase 02-authentication]: proxy.ts uses pathname.startsWith('/api/') function guard to prevent OAuth redirect_uri_mismatch from locale prefix injection
+- [Phase 02-authentication]: drizzleAdapter usePlural:true aligns Better Auth table names with existing pluralized Drizzle table definitions
 
 ### Pending Todos
 
@@ -85,6 +89,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-22T13:50:09.316Z
-Stopped at: Completed 01-foundation/01-04-PLAN.md
+Last session: 2026-03-22T18:20:09.503Z
+Stopped at: Completed 02-authentication/02-01-PLAN.md
 Resume file: None

@@ -7,9 +7,9 @@
 
 ### Authentication
 
-- [ ] **AUTH-01**: Client can sign up and log in via Google SSO
-- [ ] **AUTH-02**: Client can sign up and log in via Facebook SSO
-- [ ] **AUTH-03**: Client session persists across browser refresh
+- [x] **AUTH-01**: Client can sign up and log in via Google SSO
+- [x] **AUTH-02**: Client can sign up and log in via Facebook SSO
+- [x] **AUTH-03**: Client session persists across browser refresh
 - [ ] **AUTH-04**: Only authenticated clients can submit a booking
 
 ### Booking
@@ -93,9 +93,9 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| AUTH-01 | Phase 2 | Pending |
-| AUTH-02 | Phase 2 | Pending |
-| AUTH-03 | Phase 2 | Pending |
+| AUTH-01 | Phase 2 | Complete |
+| AUTH-02 | Phase 2 | Complete |
+| AUTH-03 | Phase 2 | Complete |
 | AUTH-04 | Phase 2 | Pending |
 | BOOK-01 | Phase 3 | Pending |
 | BOOK-02 | Phase 3 | Pending |
