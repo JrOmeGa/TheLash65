@@ -1,0 +1,33 @@
+{
+  "nav": {
+    "portfolio": "ผลงาน",
+    "services": "บริการ",
+    "about": "เกี่ยวกับเรา",
+    "book": "นัดหมาย",
+    "openMenu": "เปิดเมนู"
+  },
+  "stickyBar": {
+    "label": "จองคิวออนไลน์"
+  },
+  "portfolio": {
+    "title": "ผลงาน",
+    "empty": "ยังไม่มีภาพผลงาน",
+    "imageAlt": "รูปต่อขนตา",
+    "closeLightbox": "ปิด"
+  },
+  "services": {
+    "title": "บริการ",
+    "duration": "{minutes} นาที",
+    "empty": "ยังไม่มีบริการในขณะนี้",
+    "error": "ไม่สามารถโหลดบริการได้ กรุณาลองใหม่"
+  },
+  "about": {
+    "title": "เกี่ยวกับเรา",
+    "contact": "ติดต่อ",
+    "hours": "เวลาทำการ",
+    "bookCta": "นัดหมาย"
+  },
+  "footer": {
+    "copyright": "สงวนลิขสิทธิ์"
+  }
+}
