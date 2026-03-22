@@ -43,7 +43,11 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. Client's login state persists after closing and reopening the browser tab (session survives refresh)
   4. An unauthenticated client who tries to submit a booking is redirected to the login page
   5. Navigating to any admin route as a non-owner returns a 403 or redirect — never shows admin content
-**Plans**: TBD
+**Plans:** 2 plans
+
+Plans:
+- [ ] 02-01-PLAN.md — Auth infrastructure: Better Auth + Drizzle schema + API route + proxy.ts
+- [ ] 02-02-PLAN.md — Auth UI: booking page stub, header avatar, admin protection, E2E tests
 
 ### Phase 3: Booking Core
 **Goal**: Clients can browse real available slots driven by the owner's schedule and reserve an appointment atomically — two clients can never book the same slot
@@ -94,7 +98,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 4/4 | Complete   | 2026-03-22 |
-| 2. Authentication | 0/TBD | Not started | - |
+| 2. Authentication | 0/2 | Not started | - |
 | 3. Booking Core | 0/TBD | Not started | - |
 | 4. Payment Display | 0/TBD | Not started | - |
 | 5. Notifications | 0/TBD | Not started | - |
