@@ -12,7 +12,7 @@ Build a mobile-first, bilingual (Thai/English) online booking site for a solo la
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Foundation** - Running Next.js app with bilingual routing, public pages, and database schema deployed
+- [x] **Phase 1: Foundation** - Running Next.js app with bilingual routing, public pages, and database schema deployed (completed 2026-03-22)
 - [ ] **Phase 2: Authentication** - Clients can sign in via Google/Facebook SSO and stay authenticated
 - [ ] **Phase 3: Booking Core** - Clients can browse slots and reserve appointments; double-booking is impossible
 - [ ] **Phase 4: Payment Display** - Clients see a PromptPay QR code with the correct amount after booking
@@ -93,7 +93,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 3/4 | In Progress|  |
+| 1. Foundation | 4/4 | Complete   | 2026-03-22 |
 | 2. Authentication | 0/TBD | Not started | - |
 | 3. Booking Core | 0/TBD | Not started | - |
 | 4. Payment Display | 0/TBD | Not started | - |

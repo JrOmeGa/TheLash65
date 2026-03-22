@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-stopped_at: Completed 01-foundation/01-03-PLAN.md
-last_updated: "2026-03-22T13:41:52.539Z"
+stopped_at: Completed 01-foundation/01-04-PLAN.md
+last_updated: "2026-03-22T13:50:09.319Z"
 progress:
   total_phases: 6
-  completed_phases: 0
+  completed_phases: 1
   total_plans: 4
-  completed_plans: 3
+  completed_plans: 4
 ---
 
 # Project State
@@ -49,6 +49,7 @@ Plan: 4 of 4
 | Phase 01-foundation P01 | 6 | 2 tasks | 21 files |
 | Phase 01-foundation P02 | 3 | 2 tasks | 13 files |
 | Phase 01-foundation P03 | 8 minutes | 2 tasks | 6 files |
+| Phase 01-foundation P04 | 5 minutes | 3 tasks | 12 files |
 
 ## Accumulated Context
 
@@ -69,6 +70,8 @@ Recent decisions affecting current work:
 - [Phase 01-foundation]: Header and interactive layout components are Client Components; Footer is Server Component
 - [Phase 01-foundation]: StickyMandateBar and Book CTA link to '#' placeholder per D-12 — will be wired to booking flow in Phase 3
 - [Phase 01-foundation]: NavLink active state derived from usePathname comparison — no additional state needed
+- [Phase 01-foundation]: Lazy DB proxy in src/db/index.ts defers postgres() URL parsing to first query — prevents build-time failure when DATABASE_URL contains placeholder values
+- [Phase 01-foundation]: ServiceCard category label hardcoded as Lash Extension / ต่อขนตา — no category table in v1 schema; to be wired if categories added later
 
 ### Pending Todos
 
@@ -82,6 +85,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-22T13:41:52.534Z
-Stopped at: Completed 01-foundation/01-03-PLAN.md
+Last session: 2026-03-22T13:50:09.316Z
+Stopped at: Completed 01-foundation/01-04-PLAN.md
 Resume file: None

@@ -38,9 +38,9 @@
 
 ### Public Site
 
-- [ ] **SITE-01**: Client can view a portfolio gallery of lash work photos
-- [ ] **SITE-02**: Client can view the full service menu with descriptions and prices
-- [ ] **SITE-03**: Client can view the about page with owner info and contact details
+- [x] **SITE-01**: Client can view a portfolio gallery of lash work photos
+- [x] **SITE-02**: Client can view the full service menu with descriptions and prices
+- [x] **SITE-03**: Client can view the about page with owner info and contact details
 - [x] **SITE-04**: Site is mobile-first with responsive design across all screen sizes
 
 ### Notifications
@@ -112,9 +112,9 @@
 | ADMIN-04 | Phase 3 | Pending |
 | ADMIN-05 | Phase 3 | Pending |
 | ADMIN-06 | Phase 2 | Pending |
-| SITE-01 | Phase 1 | Pending |
-| SITE-02 | Phase 1 | Pending |
-| SITE-03 | Phase 1 | Pending |
+| SITE-01 | Phase 1 | Complete |
+| SITE-02 | Phase 1 | Complete |
+| SITE-03 | Phase 1 | Complete |
 | SITE-04 | Phase 1 | Complete |
 | NOTIF-01 | Phase 5 | Pending |
 | NOTIF-02 | Phase 5 | Pending |
