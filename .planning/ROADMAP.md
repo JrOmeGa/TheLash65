@@ -13,7 +13,7 @@ Build a mobile-first, bilingual (Thai/English) online booking site for a solo la
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Foundation** - Running Next.js app with bilingual routing, public pages, and database schema deployed (completed 2026-03-22)
-- [x] **Phase 2: Authentication** - Clients can sign in via Google/Facebook SSO and stay authenticated (completed 2026-03-22)
+- [x] **Phase 2: Authentication** - Clients can sign in via Google/Facebook SSO and stay authenticated (completed 2026-03-22)
 - [ ] **Phase 3: Booking Core** - Clients can browse slots and reserve appointments; double-booking is impossible
 - [ ] **Phase 4: Payment Display** - Clients see a PromptPay QR code with the correct amount after booking
 - [ ] **Phase 5: Notifications** - Owner and client both receive alerts at the right booking lifecycle events
@@ -59,7 +59,13 @@ Plans:
   3. Client can select a service, see its price, choose a date and time, and submit a confirmed booking
   4. If two clients attempt to book the same slot simultaneously, exactly one succeeds and the other receives an "unavailable" response
   5. Owner can set weekly recurring open hours and block specific dates or time slots via the admin interface
-**Plans**: TBD
+**Plans:** 4 plans
+
+Plans:
+- [ ] 03-01-PLAN.md — Data layer: schema migration (unique constraint), slot engine, Zustand store, Server Actions, i18n messages
+- [ ] 03-02-PLAN.md — Booking wizard UI: DateStrip, TimeSlotGrid, ServiceSelector, ConfirmStep, BookingWizard orchestrator
+- [ ] 03-03-PLAN.md — Admin schedule management: WeeklyHoursForm, BlockDateForm, admin nav link
+- [ ] 03-04-PLAN.md — Confirmation page, StickyMandateBar wiring, visual integration verification
 
 ### Phase 4: Payment Display
 **Goal**: After confirming a booking, the client sees a PromptPay QR code for the exact service amount, generated server-side so the owner's phone number never appears in client code
@@ -99,7 +105,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 |-------|----------------|--------|-----------|
 | 1. Foundation | 4/4 | Complete   | 2026-03-22 |
 | 2. Authentication | 2/2 | Complete   | 2026-03-22 |
-| 3. Booking Core | 0/TBD | Not started | - |
+| 3. Booking Core | 0/4 | Not started | - |
 | 4. Payment Display | 0/TBD | Not started | - |
 | 5. Notifications | 0/TBD | Not started | - |
 | 6. Admin Dashboard | 0/TBD | Not started | - |
