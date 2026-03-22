@@ -4,6 +4,9 @@ import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
+import { Header } from '@/components/layout/Header';
+import { Footer } from '@/components/layout/Footer';
+import { StickyMandateBar } from '@/components/layout/StickyMandateBar';
 import '../globals.css';
 
 const notoSerif = Noto_Serif({
@@ -53,7 +56,14 @@ export default async function LocaleLayout({
       className={`${notoSerif.variable} ${manrope.variable} ${sarabun.variable}`}
     >
       <body style={{ fontFamily: 'var(--font-manrope), var(--font-sarabun), sans-serif' }}>
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider>
+          <Header />
+          <main className="min-h-screen pt-14 pb-20 md:pb-0">
+            {children}
+          </main>
+          <Footer />
+          <StickyMandateBar />
+        </NextIntlClientProvider>
       </body>
     </html>
   );
