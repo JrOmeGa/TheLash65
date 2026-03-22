@@ -41,7 +41,7 @@
 - [ ] **SITE-01**: Client can view a portfolio gallery of lash work photos
 - [ ] **SITE-02**: Client can view the full service menu with descriptions and prices
 - [ ] **SITE-03**: Client can view the about page with owner info and contact details
-- [ ] **SITE-04**: Site is mobile-first with responsive design across all screen sizes
+- [x] **SITE-04**: Site is mobile-first with responsive design across all screen sizes
 
 ### Notifications
 
@@ -50,8 +50,8 @@
 
 ### Internationalization
 
-- [ ] **I18N-01**: Site supports Thai and English languages
-- [ ] **I18N-02**: User can toggle between Thai and English from any page
+- [x] **I18N-01**: Site supports Thai and English languages
+- [x] **I18N-02**: User can toggle between Thai and English from any page
 - [ ] **I18N-03**: Dates display correctly in both locales (Gregorian calendar, no Buddhist Era offset)
 
 ## v2 Requirements
@@ -115,11 +115,11 @@
 | SITE-01 | Phase 1 | Pending |
 | SITE-02 | Phase 1 | Pending |
 | SITE-03 | Phase 1 | Pending |
-| SITE-04 | Phase 1 | Pending |
+| SITE-04 | Phase 1 | Complete |
 | NOTIF-01 | Phase 5 | Pending |
 | NOTIF-02 | Phase 5 | Pending |
-| I18N-01 | Phase 1 | Pending |
-| I18N-02 | Phase 1 | Pending |
+| I18N-01 | Phase 1 | Complete |
+| I18N-02 | Phase 1 | Complete |
 | I18N-03 | Phase 1 | Pending |
 
 **Coverage:**
