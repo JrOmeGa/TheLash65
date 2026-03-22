@@ -52,7 +52,7 @@
 
 - [x] **I18N-01**: Site supports Thai and English languages
 - [x] **I18N-02**: User can toggle between Thai and English from any page
-- [ ] **I18N-03**: Dates display correctly in both locales (Gregorian calendar, no Buddhist Era offset)
+- [x] **I18N-03**: Dates display correctly in both locales (Gregorian calendar, no Buddhist Era offset)
 
 ## v2 Requirements
 
@@ -120,7 +120,7 @@
 | NOTIF-02 | Phase 5 | Pending |
 | I18N-01 | Phase 1 | Complete |
 | I18N-02 | Phase 1 | Complete |
-| I18N-03 | Phase 1 | Pending |
+| I18N-03 | Phase 1 | Complete |
 
 **Coverage:**
 - v1 requirements: 28 total
