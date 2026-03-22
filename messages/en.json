@@ -29,5 +29,14 @@
   },
   "footer": {
     "copyright": "All rights reserved"
+  },
+  "auth": {
+    "google": "Continue with Google",
+    "facebook": "Continue with Facebook",
+    "bookTitle": "Book an Appointment",
+    "signInPrompt": "Sign in to continue with your booking",
+    "authenticated": "Welcome back, {name}!",
+    "comingSoon": "Booking wizard coming soon.",
+    "signOut": "Sign out"
   }
 }

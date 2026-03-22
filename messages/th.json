@@ -29,5 +29,14 @@
   },
   "footer": {
     "copyright": "สงวนลิขสิทธิ์"
+  },
+  "auth": {
+    "google": "ดำเนินการต่อด้วย Google",
+    "facebook": "ดำเนินการต่อด้วย Facebook",
+    "bookTitle": "จองนัดหมาย",
+    "signInPrompt": "เข้าสู่ระบบเพื่อดำเนินการจอง",
+    "authenticated": "ยินดีต้อนรับกลับ {name}!",
+    "comingSoon": "ระบบจองกำลังจะมาเร็ว ๆ นี้",
+    "signOut": "ออกจากระบบ"
   }
 }
