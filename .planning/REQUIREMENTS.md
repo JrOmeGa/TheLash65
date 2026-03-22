@@ -93,40 +93,40 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| AUTH-01 | — | Pending |
-| AUTH-02 | — | Pending |
-| AUTH-03 | — | Pending |
-| AUTH-04 | — | Pending |
-| BOOK-01 | — | Pending |
-| BOOK-02 | — | Pending |
-| BOOK-03 | — | Pending |
-| BOOK-04 | — | Pending |
-| BOOK-05 | — | Pending |
-| BOOK-06 | — | Pending |
-| PAY-01 | — | Pending |
-| PAY-02 | — | Pending |
-| PAY-03 | — | Pending |
-| ADMIN-01 | — | Pending |
-| ADMIN-02 | — | Pending |
-| ADMIN-03 | — | Pending |
-| ADMIN-04 | — | Pending |
-| ADMIN-05 | — | Pending |
-| ADMIN-06 | — | Pending |
-| SITE-01 | — | Pending |
-| SITE-02 | — | Pending |
-| SITE-03 | — | Pending |
-| SITE-04 | — | Pending |
-| NOTIF-01 | — | Pending |
-| NOTIF-02 | — | Pending |
-| I18N-01 | — | Pending |
-| I18N-02 | — | Pending |
-| I18N-03 | — | Pending |
+| AUTH-01 | Phase 2 | Pending |
+| AUTH-02 | Phase 2 | Pending |
+| AUTH-03 | Phase 2 | Pending |
+| AUTH-04 | Phase 2 | Pending |
+| BOOK-01 | Phase 3 | Pending |
+| BOOK-02 | Phase 3 | Pending |
+| BOOK-03 | Phase 3 | Pending |
+| BOOK-04 | Phase 3 | Pending |
+| BOOK-05 | Phase 3 | Pending |
+| BOOK-06 | Phase 3 | Pending |
+| PAY-01 | Phase 4 | Pending |
+| PAY-02 | Phase 4 | Pending |
+| PAY-03 | Phase 4 | Pending |
+| ADMIN-01 | Phase 6 | Pending |
+| ADMIN-02 | Phase 6 | Pending |
+| ADMIN-03 | Phase 6 | Pending |
+| ADMIN-04 | Phase 3 | Pending |
+| ADMIN-05 | Phase 3 | Pending |
+| ADMIN-06 | Phase 2 | Pending |
+| SITE-01 | Phase 1 | Pending |
+| SITE-02 | Phase 1 | Pending |
+| SITE-03 | Phase 1 | Pending |
+| SITE-04 | Phase 1 | Pending |
+| NOTIF-01 | Phase 5 | Pending |
+| NOTIF-02 | Phase 5 | Pending |
+| I18N-01 | Phase 1 | Pending |
+| I18N-02 | Phase 1 | Pending |
+| I18N-03 | Phase 1 | Pending |
 
 **Coverage:**
 - v1 requirements: 28 total
-- Mapped to phases: 0
-- Unmapped: 28 ⚠️
+- Mapped to phases: 28
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-03-22*
-*Last updated: 2026-03-22 after initial definition*
+*Last updated: 2026-03-22 after roadmap creation — all 28 requirements mapped*
