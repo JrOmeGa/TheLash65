@@ -4,6 +4,9 @@ import { useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/i18n/navigation';
 import { LocaleSwitcher } from './LocaleSwitcher';
 import { MobileDrawer } from './MobileDrawer';
+import { authClient } from '@/lib/auth-client';
+import { useRouter } from 'next/navigation';
+import { User } from 'lucide-react';
 
 function NavLink({
   href,
@@ -39,6 +42,36 @@ function NavLink({
         aria-hidden="true"
       />
     </Link>
+  );
+}
+
+function UserAvatar() {
+  const { data: session } = authClient.useSession();
+  const t = useTranslations('auth');
+  const router = useRouter();
+  if (!session) return null; // per D-11: no change when logged out
+
+  return (
+    <button
+      type="button"
+      onClick={() => authClient.signOut().then(() => router.refresh())}
+      className="w-8 h-8 rounded-full overflow-hidden flex-shrink-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#755944]"
+      aria-label={t('signOut')}
+      data-testid="user-avatar"
+    >
+      {session.user.image ? (
+        <img
+          src={session.user.image}
+          alt={session.user.name ?? ''}
+          className="w-full h-full object-cover"
+          referrerPolicy="no-referrer"
+        />
+      ) : (
+        <span className="w-full h-full flex items-center justify-center bg-[#755944] text-white">
+          <User className="w-4 h-4" />
+        </span>
+      )}
+    </button>
   );
 }
 
@@ -80,9 +113,10 @@ export function Header() {
           ))}
         </nav>
 
-        {/* Right side: LocaleSwitcher + Book CTA (desktop) + MobileDrawer (mobile) */}
+        {/* Right side: LocaleSwitcher + UserAvatar + Book CTA (desktop) + MobileDrawer (mobile) */}
         <div className="flex items-center gap-2">
           <LocaleSwitcher />
+          <UserAvatar />
 
           {/* Desktop Book CTA */}
           <Link
