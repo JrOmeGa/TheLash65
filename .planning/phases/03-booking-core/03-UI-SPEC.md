@@ -56,10 +56,11 @@ All sizes carry forward patterns established in ServiceCard and Header (Phase 1 
 | Display | 28px | 600 (semibold) | 1.2 | `--font-heading` (Noto Serif) | Confirmation page booking summary heading |
 | Heading | 20px | 600 (semibold) | 1.2 | `--font-heading` (Noto Serif) | Step heading ("Choose a Date", service card names) |
 | Body | 16px | 400 (regular) | 1.5 | `--font-body` (Manrope) | Wizard step descriptions, next-steps copy on confirmation |
-| Label | 14px | 400 (regular) | 1.5 | `--font-body` (Manrope) | Service descriptions, price display, slot time labels |
-| Micro | 12px | 600 (semibold) | 1.3 | `--font-body` (Manrope) | Eyebrow labels (day names in date strip, "UNAVAILABLE" badge), duration labels |
+| Label | 14px | 400 (regular) / 600 (semibold) | 1.5 standard / 1.3 badge | `--font-body` (Manrope) | Service descriptions, price display, slot time labels (400); eyebrow labels, "UNAVAILABLE" badge, day names in date strip, duration labels (600 semibold at line-height 1.3) |
 
 Only 2 weights are used: **400 (regular)** and **600 (semibold)**. No 500 or 700.
+
+Note: The former Micro role (12px) is consolidated into Label (14px semibold). Badge/eyebrow/day-name contexts use 14px at weight 600 and line-height 1.3 to preserve visual hierarchy without a fifth type size.
 
 ---
 
@@ -95,9 +96,11 @@ Unavailable slots (grayed state): `--color-surface-container-low` background, `r
 
 ### Date Strip (DateStrip.tsx)
 
+DateStrip is the primary visual anchor on Step 1 — it spans full width below the step heading and receives the first user interaction.
+
 - Horizontal scroll container, `overflow-x: auto`, `-webkit-overflow-scrolling: touch`, `scroll-snap-type: x mandatory`
 - Each pill: `scroll-snap-align: start`, min-width `60px`, height `44px`, `border-radius: 8px`
-- Pill layout: day name (12px micro, muted) stacked above date number (16px body, semibold when selected)
+- Pill layout: day name (**14px label, semibold 600, line-height 1.3**, muted) stacked above date number (16px body, semibold when selected)
 - **Available, unselected:** background `--color-surface-container-low`, text `--color-on-surface`
 - **Available, selected:** background `linear-gradient(135deg, #755944 0%, #9c7660 100%)`, text `#ffffff`
 - **Unavailable (D-08):** background `--color-surface-container-low`, text `rgba(31, 27, 24, 0.35)`, `pointer-events: none`
@@ -112,7 +115,7 @@ Unavailable slots (grayed state): `--color-surface-container-low` background, `r
 - Each slot button: height `44px`, `border-radius: 4px`, `font-size: 14px`, `font-weight: 600`
 - **Available, unselected:** background `--color-surface-container-low`, text `--color-on-surface`, border `none`
 - **Available, selected:** background `linear-gradient(135deg, #755944 0%, #9c7660 100%)`, text `#ffffff`
-- **Unavailable (D-07):** background `--color-surface-container-low`, text `rgba(31, 27, 24, 0.35)`, `pointer-events: none`; label below time reads "Unavailable" at 10px micro — do NOT hide these buttons
+- **Unavailable (D-07):** background `--color-surface-container-low`, text `rgba(31, 27, 24, 0.35)`, `pointer-events: none`; label below time reads "Unavailable" at **14px label, semibold 600** — do NOT hide these buttons
 - Focus ring: `outline: 2px solid #755944; outline-offset: 2px` (matches existing button.tsx pattern)
 
 ### Service Selector (ServiceSelector.tsx)
@@ -129,7 +132,7 @@ Unavailable slots (grayed state): `--color-surface-container-low` background, `r
 - Completed step: filled circle `#9c7660`, 10px diameter
 - Upcoming step: outlined circle `rgba(117, 89, 68, 0.30)`, 10px diameter
 - Connecting line between dots: `1px solid rgba(117, 89, 68, 0.20)`
-- Step label text: 12px micro, muted — shown on desktop only (hidden on mobile to save space)
+- Step label text: **14px label, semibold 600, line-height 1.3**, muted — shown on desktop only (hidden on mobile to save space)
 
 ### Confirmation Page (book/confirmation/[id])
 
@@ -193,7 +196,7 @@ All copy has Thai and English variants via next-intl. English shown here as the 
 | Booking conflict error (BOOK-06) | "That time was just taken. Please choose another slot." | "เวลานี้ถูกจองไปแล้ว กรุณาเลือกเวลาอื่น" |
 | Booking submission error | "Something went wrong. Your booking was not placed. Please try again." | "เกิดข้อผิดพลาด การจองของคุณยังไม่สำเร็จ กรุณาลองใหม่" |
 | Admin: Block date CTA | "Block this day" | "บล็อกวันนี้" |
-| Admin: Unblock date CTA | "Unblock" | "ยกเลิกการบล็อก" |
+| Admin: Unblock date CTA | "Unblock date" | "ยกเลิกการบล็อก" |
 | Admin: Save schedule CTA | "Save schedule" | "บันทึกตาราง" |
 | Admin: Schedule saved toast | "Schedule saved." | "บันทึกตารางสำเร็จ" |
 | Admin: Schedule save error | "Failed to save. Please try again." | "บันทึกไม่สำเร็จ กรุณาลองใหม่" |
@@ -204,7 +207,7 @@ All copy has Thai and English variants via next-intl. English shown here as the 
 
 | Action | Trigger | Confirmation Approach |
 |--------|---------|----------------------|
-| Unblock a date | Tap "Unblock" chip button | Inline row expands to show "Unblock [date]?" + "Yes, unblock" (destructive variant) + "Cancel" — no dialog/modal |
+| Unblock a date | Tap "Unblock date" chip button | Inline row expands to show "Unblock [date]?" + "Yes, unblock" (destructive variant) + "Cancel" — no dialog/modal |
 
 No client-facing destructive actions in Phase 3. Booking cancellation is Phase 6 / v2.
 
