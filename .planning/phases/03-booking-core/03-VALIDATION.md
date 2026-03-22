@@ -2,7 +2,7 @@
 phase: 3
 slug: booking-core
 status: draft
-nyquist_compliant: false
+nyquist_compliant: true
 wave_0_complete: false
 created: 2026-03-23
 ---
@@ -38,25 +38,24 @@ created: 2026-03-23
 
 | Task ID | Plan | Wave | Requirement | Test Type | Automated Command | File Exists | Status |
 |---------|------|------|-------------|-----------|-------------------|-------------|--------|
-| 3-01-01 | 01 | 1 | BOOK-01 | unit | `npx vitest run src/lib/availability` | ❌ W0 | ⬜ pending |
-| 3-01-02 | 01 | 1 | BOOK-02 | unit | `npx vitest run src/lib/availability` | ❌ W0 | ⬜ pending |
-| 3-02-01 | 02 | 1 | BOOK-03 | unit | `npx vitest run src/lib/booking` | ❌ W0 | ⬜ pending |
-| 3-02-02 | 02 | 1 | BOOK-04 | unit | `npx vitest run src/lib/booking` | ❌ W0 | ⬜ pending |
-| 3-03-01 | 03 | 2 | BOOK-05 | integration | `npx vitest run src/app/api/bookings` | ❌ W0 | ⬜ pending |
-| 3-03-02 | 03 | 2 | BOOK-06 | integration | `npx vitest run src/app/api/bookings` | ❌ W0 | ⬜ pending |
-| 3-04-01 | 04 | 2 | ADMIN-04 | unit | `npx vitest run src/app/admin/schedule` | ❌ W0 | ⬜ pending |
-| 3-04-02 | 04 | 2 | ADMIN-05 | unit | `npx vitest run src/app/admin/schedule` | ❌ W0 | ⬜ pending |
+| 3-01-01 | 01 | 1 | BOOK-01, BOOK-02, BOOK-06 | unit | `npx vitest run src/lib/date-utils.test.ts --reporter=verbose` | W0 | pending |
+| 3-01-02 | 01 | 1 | BOOK-06 | unit | `npx vitest run src/lib/actions/booking.test.ts --reporter=verbose` | W0 | pending |
+| 3-02-01 | 02 | 2 | BOOK-01, BOOK-02, BOOK-03 | compile | `npx tsc --noEmit 2>&1 \| head -30` | n/a | pending |
+| 3-02-02 | 02 | 2 | BOOK-03, BOOK-06 | compile | `npx tsc --noEmit 2>&1 \| head -30` | n/a | pending |
+| 3-03-01 | 03 | 2 | ADMIN-04, ADMIN-05 | unit | `npx vitest run tests/unit/schedule.test.ts --reporter=verbose` | W0 | pending |
+| 3-03-02 | 03 | 2 | ADMIN-04 | compile | `npx tsc --noEmit 2>&1 \| head -30` | n/a | pending |
+| 3-04-01 | 04 | 3 | BOOK-03, BOOK-01 | compile | `npx tsc --noEmit 2>&1 \| head -30` | n/a | pending |
+| 3-04-02 | 04 | 3 | all | manual | checkpoint:human-verify | n/a | pending |
 
-*Status: ⬜ pending · ✅ green · ❌ red · ⚠️ flaky*
+*Status: pending / green / red / flaky*
 
 ---
 
 ## Wave 0 Requirements
 
-- [ ] `src/lib/__tests__/availability.test.ts` — stubs for BOOK-01, BOOK-02
-- [ ] `src/lib/__tests__/booking.test.ts` — stubs for BOOK-03, BOOK-04
-- [ ] `src/app/api/bookings/__tests__/route.test.ts` — stubs for BOOK-05, BOOK-06
-- [ ] `src/app/admin/schedule/__tests__/schedule.test.ts` — stubs for ADMIN-04, ADMIN-05
+- [ ] `src/lib/date-utils.test.ts` — tests for `generateSlotsForDate` covering BOOK-01 (slot generation from rules), BOOK-02 (blocked dates produce zero slots), and booked-slot unavailability
+- [ ] `src/lib/actions/booking.test.ts` — tests for `createBooking` conflict path (BOOK-06 atomic reservation: onConflictDoNothing returns [] triggers slot_unavailable error)
+- [ ] `tests/unit/schedule.test.ts` — tests for ADMIN-04 (upsert rules produce correct slots via generateSlotsForDate) and ADMIN-05 (blocked date causes zero slots)
 - [ ] `vitest.config.ts` — if not already configured in project
 
 ---
@@ -65,19 +64,17 @@ created: 2026-03-23
 
 | Behavior | Requirement | Why Manual | Test Instructions |
 |----------|-------------|------------|-------------------|
-| PromptPay QR renders correctly and is scannable | BOOK-05 | Requires physical device scan | Open booking confirmation page, scan QR with Thai banking app, verify amount matches service price |
-| LINE push notification delivered to owner | BOOK-06 | Requires LINE Messaging API webhook | Submit booking, verify owner receives LINE message with booking details within 60s |
-| Admin schedule blocks correctly reflect on client calendar | ADMIN-04, BOOK-02 | Cross-component visual verification | Add block in admin, open client booking flow, verify blocked slot not selectable |
+| Admin schedule blocks correctly reflect on client calendar | ADMIN-04, BOOK-02 | Cross-component visual verification across admin and client flows | 1. As admin, navigate to /admin/schedule. 2. Block a specific date. 3. Open client booking flow at /book. 4. Verify the blocked date appears grayed out and is not tappable in the date strip. |
 
 ---
 
 ## Validation Sign-Off
 
-- [ ] All tasks have `<automated>` verify or Wave 0 dependencies
-- [ ] Sampling continuity: no 3 consecutive tasks without automated verify
-- [ ] Wave 0 covers all MISSING references
-- [ ] No watch-mode flags
-- [ ] Feedback latency < 30s
-- [ ] `nyquist_compliant: true` set in frontmatter
+- [x] All tasks have `<automated>` verify or Wave 0 dependencies
+- [x] Sampling continuity: no 3 consecutive tasks without automated verify
+- [x] Wave 0 covers all MISSING references
+- [x] No watch-mode flags
+- [x] Feedback latency < 30s
+- [x] `nyquist_compliant: true` set in frontmatter
 
 **Approval:** pending
