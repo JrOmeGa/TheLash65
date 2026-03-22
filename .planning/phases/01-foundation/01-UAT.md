@@ -1,9 +1,9 @@
 ---
-status: complete
+status: resolved
 phase: 01-foundation
 source: 01-01-SUMMARY.md, 01-02-SUMMARY.md, 01-03-SUMMARY.md, 01-04-SUMMARY.md
 started: 2026-03-22T00:00:00Z
-updated: 2026-03-22T00:00:00Z
+updated: 2026-03-22T22:00:00Z
 ---
 
 ## Current Test
@@ -75,11 +75,17 @@ blocked: 0
 ## Gaps
 
 - truth: "Clicking a gallery image opens a fullscreen dark overlay with the image and a close button (X) in the top-right corner"
-  status: failed
+  status: resolved
   reason: "User reported: Doesn't look fullscreen, and no close button"
   severity: major
   test: 9
-  root_cause: ""
-  artifacts: []
-  missing: []
-  debug_session: ""
+  root_cause: "Two bugs in src/components/ui/dialog.tsx: (1) DialogContent base classes include hard-coded translate-x[-50%]/translate-y[-50%] centering transforms that survive tailwind-merge overrides, preventing inset-0 from making the dialog fullscreen. (2) DialogContent always injects its own DialogPrimitive.Close button after {children}, occluding the consumer's custom close button in GalleryLightbox.tsx. GalleryLightbox.tsx itself is correctly authored."
+  artifacts:
+    - path: "src/components/ui/dialog.tsx"
+      issue: "Line 39 — base classes include left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]; these are not cancelled by consumer's inset-0"
+    - path: "src/components/ui/dialog.tsx"
+      issue: "Lines 45-51 — built-in DialogPrimitive.Close is always rendered after {children}, occluding and replacing any consumer-provided DialogClose"
+  missing:
+    - "Remove translate-x-[-50%], translate-y-[-50%], left-[50%], top-[50%] from DialogContent base classes in dialog.tsx"
+    - "Remove the auto-injected DialogPrimitive.Close block (lines 45-51) from DialogContent in dialog.tsx"
+    - "Callers needing a centered modal add centering classes themselves; callers needing a close button add <DialogClose> explicitly (GalleryLightbox already does this)"
