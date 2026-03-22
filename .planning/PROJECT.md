@@ -12,13 +12,13 @@ Clients can book lash extension appointments online and pay via PromptPay, repla
 
 ### Validated
 
-(None yet — ship to validate)
+- [x] Client can view portfolio/gallery of lash work — Validated in Phase 01: Foundation
+- [x] Client can view about page and contact information — Validated in Phase 01: Foundation
+- [x] Client can view full service menu with prices — Validated in Phase 01: Foundation
+- [x] Site supports Thai and English with language toggle — Validated in Phase 01: Foundation
+- [x] Site is mobile-first with responsive design — Validated in Phase 01: Foundation
 
 ### Active
-
-- [ ] Client can view portfolio/gallery of lash work
-- [ ] Client can view about page and contact information
-- [ ] Client can view full service menu with prices
 - [ ] Client can select available date and time slot from calendar
 - [ ] Client can select service type and see cost
 - [ ] Client must log in via SSO (Facebook/Google/Line) to confirm booking
@@ -29,9 +29,6 @@ Clients can book lash extension appointments online and pay via PromptPay, repla
 - [ ] Shop owner receives Line notification of new booking
 - [ ] Shop owner can view all bookings in admin dashboard
 - [ ] Shop owner can manage weekly recurring schedule with exception blocking
-- [ ] Site supports Thai and English with language toggle
-- [ ] Site is mobile-first with responsive design
-
 ### Out of Scope
 
 - Online payment gateway (Stripe, Omise) — PromptPay QR with manual confirmation is sufficient for solo operator
@@ -85,4 +82,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-03-22 after initialization*
+*Last updated: 2026-03-22 after Phase 01 (Foundation) complete — public pages, bilingual routing, and DB schema deployed*
