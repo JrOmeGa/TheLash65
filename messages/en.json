@@ -1,0 +1,33 @@
+{
+  "nav": {
+    "portfolio": "Portfolio",
+    "services": "Services",
+    "about": "About",
+    "book": "Book an Appointment",
+    "openMenu": "Open menu"
+  },
+  "stickyBar": {
+    "label": "Book Online"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "empty": "No portfolio photos yet.",
+    "imageAlt": "Lash extension photo",
+    "closeLightbox": "Close"
+  },
+  "services": {
+    "title": "Services",
+    "duration": "{minutes} min",
+    "empty": "No services available yet.",
+    "error": "Could not load services. Please refresh the page."
+  },
+  "about": {
+    "title": "About",
+    "contact": "Contact",
+    "hours": "Hours",
+    "bookCta": "Book an Appointment"
+  },
+  "footer": {
+    "copyright": "All rights reserved"
+  }
+}
