@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-stopped_at: Completed 01-foundation/01-02-PLAN.md
-last_updated: "2026-03-22T13:37:07.342Z"
+stopped_at: Completed 01-foundation/01-03-PLAN.md
+last_updated: "2026-03-22T13:41:52.539Z"
 progress:
   total_phases: 6
   completed_phases: 0
   total_plans: 4
-  completed_plans: 2
+  completed_plans: 3
 ---
 
 # Project State
@@ -24,7 +24,7 @@ See: .planning/PROJECT.md (updated 2026-03-22)
 ## Current Position
 
 Phase: 01 (foundation) — EXECUTING
-Plan: 3 of 4
+Plan: 4 of 4
 
 ## Performance Metrics
 
@@ -48,6 +48,7 @@ Plan: 3 of 4
 *Updated after each plan completion*
 | Phase 01-foundation P01 | 6 | 2 tasks | 21 files |
 | Phase 01-foundation P02 | 3 | 2 tasks | 13 files |
+| Phase 01-foundation P03 | 8 minutes | 2 tasks | 6 files |
 
 ## Accumulated Context
 
@@ -65,6 +66,9 @@ Recent decisions affecting current work:
 - [Phase 01-foundation]: session-mode port 5432 for Supabase Drizzle connection (not transaction-mode 6543)
 - [Phase 01-foundation]: E2E test stubs use data-testid selectors as acceptance contracts for Plans 03/04
 - [Phase 01-foundation]: formatDateGregorian utility is the only approved date formatter — calendar:'gregory' always required for Thai locale
+- [Phase 01-foundation]: Header and interactive layout components are Client Components; Footer is Server Component
+- [Phase 01-foundation]: StickyMandateBar and Book CTA link to '#' placeholder per D-12 — will be wired to booking flow in Phase 3
+- [Phase 01-foundation]: NavLink active state derived from usePathname comparison — no additional state needed
 
 ### Pending Todos
 
@@ -78,6 +82,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-22T13:37:07.337Z
-Stopped at: Completed 01-foundation/01-02-PLAN.md
+Last session: 2026-03-22T13:41:52.534Z
+Stopped at: Completed 01-foundation/01-03-PLAN.md
 Resume file: None
