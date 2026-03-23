@@ -41,7 +41,7 @@ export function StickyMandateBar() {
     >
       {/* Label */}
       <Link
-        href="#"
+        href="/book"
         className="flex items-center gap-3 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
         aria-label={t('label')}
       >
