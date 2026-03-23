@@ -59,12 +59,12 @@ Plans:
   3. Client can select a service, see its price, choose a date and time, and submit a confirmed booking
   4. If two clients attempt to book the same slot simultaneously, exactly one succeeds and the other receives an "unavailable" response
   5. Owner can set weekly recurring open hours and block specific dates or time slots via the admin interface
-**Plans:** 1/4 plans executed
+**Plans:** 2/4 plans executed
 
 Plans:
 - [x] 03-01-PLAN.md — Data layer: schema migration (unique constraint), slot engine, Zustand store, Server Actions, i18n messages
 - [ ] 03-02-PLAN.md — Booking wizard UI: DateStrip, TimeSlotGrid, ServiceSelector, ConfirmStep, BookingWizard orchestrator
-- [ ] 03-03-PLAN.md — Admin schedule management: WeeklyHoursForm, BlockDateForm, admin nav link
+- [x] 03-03-PLAN.md — Admin schedule management: WeeklyHoursForm, BlockDateForm, admin nav link
 - [ ] 03-04-PLAN.md — Confirmation page, StickyMandateBar wiring, visual integration verification
 
 ### Phase 4: Payment Display
@@ -105,7 +105,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 |-------|----------------|--------|-----------|
 | 1. Foundation | 4/4 | Complete   | 2026-03-22 |
 | 2. Authentication | 2/2 | Complete   | 2026-03-22 |
-| 3. Booking Core | 1/4 | In Progress|  |
+| 3. Booking Core | 2/4 | In Progress|  |
 | 4. Payment Display | 0/TBD | Not started | - |
 | 5. Notifications | 0/TBD | Not started | - |
 | 6. Admin Dashboard | 0/TBD | Not started | - |
