@@ -44,8 +44,9 @@ export function generateSlotsForDate(params: {
   blockedDates: Date[];
   bookedTimestamps: Date[];
   targetDate: Date;
+  now?: Date; // defaults to new Date(); injectable for tests
 }): SlotStatus[] {
-  const { rule, blockedDates, bookedTimestamps, targetDate } = params;
+  const { rule, blockedDates, bookedTimestamps, targetDate, now = new Date() } = params;
 
   // No rule for this day of week = no slots
   if (!rule) return [];
@@ -67,10 +68,11 @@ export function generateSlotsForDate(params: {
     const isBooked = bookedTimestamps.some(
       (b) => Math.abs(b.getTime() - cursor.getTime()) < 60_000,
     );
+    const isPast = cursor <= now;
     slots.push({
       time: `${String(getHours(cursor)).padStart(2, '0')}:${String(getMinutes(cursor)).padStart(2, '0')}`,
       startsAt: cursor,
-      available: !isBooked,
+      available: !isBooked && !isPast,
     });
     cursor = addMinutes(cursor, rule.slotDurationMinutes);
   }
