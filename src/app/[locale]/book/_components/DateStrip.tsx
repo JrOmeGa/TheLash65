@@ -1,6 +1,7 @@
 'use client';
 
 import { addDays, startOfDay, isSameDay } from 'date-fns';
+import { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import { useBookingStore } from '@/lib/stores/bookingStore';
 import { formatDateGregorian } from '@/lib/date-utils';
@@ -22,8 +23,12 @@ export function DateStrip({ scheduleRules, blockedDates, locale }: DateStripProp
   const t = useTranslations('booking');
   const selectedDate = useBookingStore((s) => s.selectedDate);
 
-  // Generate 60 date pills starting from today (D-03)
-  const dates = Array.from({ length: 60 }, (_, i) => addDays(startOfDay(new Date()), i));
+  // Generate 60 date pills client-side only — new Date() differs between server (UTC)
+  // and client (local timezone), causing hydration mismatches if computed at render time.
+  const [dates, setDates] = useState<Date[]>([]);
+  useEffect(() => {
+    setDates(Array.from({ length: 60 }, (_, i) => addDays(startOfDay(new Date()), i)));
+  }, []);
 
   function isDateAvailable(date: Date): boolean {
     const dayOfWeek = date.getDay();
