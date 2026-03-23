@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-stopped_at: Completed 03-booking-core Plan 03 (admin schedule UI)
-last_updated: "2026-03-23T06:47:50.397Z"
+stopped_at: Completed 03-booking-core Plan 02 (booking wizard UI)
+last_updated: "2026-03-23T06:48:40.312Z"
 progress:
   total_phases: 6
   completed_phases: 2
   total_plans: 11
-  completed_plans: 9
+  completed_plans: 10
 ---
 
 # Project State
@@ -24,7 +24,7 @@ See: .planning/PROJECT.md (updated 2026-03-22)
 ## Current Position
 
 Phase: 03 (booking-core) — EXECUTING
-Plan: 3 of 4
+Plan: 4 of 4
 
 ## Performance Metrics
 
@@ -54,6 +54,7 @@ Plan: 3 of 4
 | Phase 02-authentication P02 | 3min | 3 tasks | 10 files |
 | Phase 03-booking-core P01 | 7min | 2 tasks | 10 files |
 | Phase 03-booking-core P03 | 2min | 2 tasks | 5 files |
+| Phase 03 P02 | 5min | 2 tasks | 7 files |
 
 ## Accumulated Context
 
@@ -88,6 +89,8 @@ Recent decisions affecting current work:
 - [Phase 03-booking-core]: blockDate stores noon UTC (T12:00:00Z) to avoid timezone boundary issues with Thai dates
 - [Phase 03-booking-core]: Custom toggle (role=switch button) used in WeeklyHoursForm — satisfies UI-SPEC without adding new shadcn import
 - [Phase 03-booking-core]: useParams() in BlockDateForm for locale access — no locale prop, reads from route params directly
+- [Phase 03]: ISO strings reconstituted via useMemo in BookingWizard — centralizes RSC boundary crossing for Date objects
+- [Phase 03]: DateStrip and TimeSlotGrid receive pre-processed Date[] from BookingWizard orchestrator — avoids repeated ISO reconstitution in step components
 
 ### Pending Todos
 
@@ -101,6 +104,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-23T06:47:50.394Z
-Stopped at: Completed 03-booking-core Plan 03 (admin schedule UI)
+Last session: 2026-03-23T06:48:40.309Z
+Stopped at: Completed 03-booking-core Plan 02 (booking wizard UI)
 Resume file: None

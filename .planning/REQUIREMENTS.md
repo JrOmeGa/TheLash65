@@ -14,9 +14,9 @@
 
 ### Booking
 
-- [ ] **BOOK-01**: Client can view available date and time slots on a calendar picker
-- [ ] **BOOK-02**: Client can select a service type and see its cost before booking
-- [ ] **BOOK-03**: Client can confirm a booking after selecting date, time, and service
+- [x] **BOOK-01**: Client can view available date and time slots on a calendar picker
+- [x] **BOOK-02**: Client can select a service type and see its cost before booking
+- [x] **BOOK-03**: Client can confirm a booking after selecting date, time, and service
 - [x] **BOOK-04**: Available slots reflect the shop's recurring weekly schedule
 - [x] **BOOK-05**: Blocked dates/times do not appear as available to clients
 - [x] **BOOK-06**: Two clients cannot book the same time slot (atomic reservation)
@@ -97,9 +97,9 @@
 | AUTH-02 | Phase 2 | Complete |
 | AUTH-03 | Phase 2 | Complete |
 | AUTH-04 | Phase 2 | Complete |
-| BOOK-01 | Phase 3 | Pending |
-| BOOK-02 | Phase 3 | Pending |
-| BOOK-03 | Phase 3 | Pending |
+| BOOK-01 | Phase 3 | Complete |
+| BOOK-02 | Phase 3 | Complete |
+| BOOK-03 | Phase 3 | Complete |
 | BOOK-04 | Phase 3 | Complete |
 | BOOK-05 | Phase 3 | Complete |
 | BOOK-06 | Phase 3 | Complete |
