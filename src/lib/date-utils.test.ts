@@ -1,5 +1,8 @@
 import { describe, it, expect, beforeEach } from 'vitest';
 import { generateSlotsForDate } from './date-utils';
+import { useBookingStore as bookingStoreImport } from './stores/bookingStore';
+
+type BookingStoreType = typeof bookingStoreImport;
 
 // ────────────────────────────────────────────────────────────────────────────────
 // generateSlotsForDate tests
@@ -118,8 +121,7 @@ function slots_helper_booked_12(targetDate: Date): Date {
 // ────────────────────────────────────────────────────────────────────────────────
 
 describe('useBookingStore', () => {
-  // Dynamically imported after module is available
-  let useBookingStore: ReturnType<typeof import('./stores/bookingStore')['useBookingStore']>;
+  let useBookingStore: BookingStoreType;
 
   beforeEach(async () => {
     // Fresh import for store isolation
