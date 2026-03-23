@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-stopped_at: Completed 02-authentication/02-02-PLAN.md
-last_updated: "2026-03-22T18:28:55.474Z"
+stopped_at: Completed 03-booking-core Plan 01 (data layer)
+last_updated: "2026-03-23T06:42:48.992Z"
 progress:
   total_phases: 6
   completed_phases: 2
-  total_plans: 7
-  completed_plans: 7
+  total_plans: 11
+  completed_plans: 8
 ---
 
 # Project State
@@ -19,12 +19,12 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-22)
 
 **Core value:** Clients can book lash extension appointments online and pay via PromptPay, replacing manual scheduling over chat.
-**Current focus:** Phase 02 — authentication
+**Current focus:** Phase 03 — booking-core
 
 ## Current Position
 
-Phase: 3
-Plan: Not started
+Phase: 03 (booking-core) — EXECUTING
+Plan: 2 of 4
 
 ## Performance Metrics
 
@@ -52,6 +52,7 @@ Plan: Not started
 | Phase 01-foundation P04 | 5 minutes | 3 tasks | 12 files |
 | Phase 02-authentication P01 | 10min | 2 tasks | 6 files |
 | Phase 02-authentication P02 | 3min | 3 tasks | 10 files |
+| Phase 03-booking-core P01 | 7min | 2 tasks | 10 files |
 
 ## Accumulated Context
 
@@ -80,6 +81,10 @@ Recent decisions affecting current work:
 - [Phase 02-authentication]: UserAvatar placed in Header right-side div after LocaleSwitcher — visible on all screen sizes without modifying MobileDrawer
 - [Phase 02-authentication]: lucide-react installed as dependency — required by plan for User icon fallback in avatar, was missing from project
 - [Phase 02-authentication]: Admin layout redirect not in try/catch — Next.js redirect() throws NEXT_REDIRECT internally; catch blocks would absorb the throw and break redirection
+- [Phase 03-booking-core]: Zustand 5 installed (5.0.12) — create() API compatible, no bridging needed for vitest node environment
+- [Phase 03-booking-core]: bookingSchema uses z.string().datetime() — Zod v4 still supports this on string schema
+- [Phase 03-booking-core]: Server Action boundary: always pass ISO 8601 strings, never Date objects (serialize over network)
+- [Phase 03-booking-core]: blockDate stores noon UTC (T12:00:00Z) to avoid timezone boundary issues with Thai dates
 
 ### Pending Todos
 
@@ -93,6 +98,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-22T18:25:27.413Z
-Stopped at: Completed 02-authentication/02-02-PLAN.md
+Last session: 2026-03-23T06:42:48.989Z
+Stopped at: Completed 03-booking-core Plan 01 (data layer)
 Resume file: None
