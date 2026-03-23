@@ -41,3 +41,9 @@ drizzle/meta/
 next-env.d.ts
 
 .vercel
+
+# claude code local settings
+.claude/
+
+# playwright mcp logs/screenshots
+.playwright-mcp/

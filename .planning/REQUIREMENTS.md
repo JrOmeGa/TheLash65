@@ -7,19 +7,19 @@
 
 ### Authentication
 
-- [ ] **AUTH-01**: Client can sign up and log in via Google SSO
-- [ ] **AUTH-02**: Client can sign up and log in via Facebook SSO
-- [ ] **AUTH-03**: Client session persists across browser refresh
-- [ ] **AUTH-04**: Only authenticated clients can submit a booking
+- [x] **AUTH-01**: Client can sign up and log in via Google SSO
+- [x] **AUTH-02**: Client can sign up and log in via Facebook SSO
+- [x] **AUTH-03**: Client session persists across browser refresh
+- [x] **AUTH-04**: Only authenticated clients can submit a booking
 
 ### Booking
 
-- [ ] **BOOK-01**: Client can view available date and time slots on a calendar picker
-- [ ] **BOOK-02**: Client can select a service type and see its cost before booking
-- [ ] **BOOK-03**: Client can confirm a booking after selecting date, time, and service
-- [ ] **BOOK-04**: Available slots reflect the shop's recurring weekly schedule
-- [ ] **BOOK-05**: Blocked dates/times do not appear as available to clients
-- [ ] **BOOK-06**: Two clients cannot book the same time slot (atomic reservation)
+- [x] **BOOK-01**: Client can view available date and time slots on a calendar picker
+- [x] **BOOK-02**: Client can select a service type and see its cost before booking
+- [x] **BOOK-03**: Client can confirm a booking after selecting date, time, and service
+- [x] **BOOK-04**: Available slots reflect the shop's recurring weekly schedule
+- [x] **BOOK-05**: Blocked dates/times do not appear as available to clients
+- [x] **BOOK-06**: Two clients cannot book the same time slot (atomic reservation)
 
 ### Payment
 
@@ -32,9 +32,9 @@
 - [ ] **ADMIN-01**: Owner can view all bookings in a dashboard (upcoming, past, pending payment)
 - [ ] **ADMIN-02**: Owner can confirm payment received to finalize a booking
 - [ ] **ADMIN-03**: Owner can cancel a booking
-- [ ] **ADMIN-04**: Owner can set recurring weekly availability (open hours per day)
-- [ ] **ADMIN-05**: Owner can block specific dates or time slots (exceptions)
-- [ ] **ADMIN-06**: Admin pages are protected — only the owner can access them
+- [x] **ADMIN-04**: Owner can set recurring weekly availability (open hours per day)
+- [x] **ADMIN-05**: Owner can block specific dates or time slots (exceptions)
+- [x] **ADMIN-06**: Admin pages are protected — only the owner can access them
 
 ### Public Site
 
@@ -93,25 +93,25 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| AUTH-01 | Phase 2 | Pending |
-| AUTH-02 | Phase 2 | Pending |
-| AUTH-03 | Phase 2 | Pending |
-| AUTH-04 | Phase 2 | Pending |
-| BOOK-01 | Phase 3 | Pending |
-| BOOK-02 | Phase 3 | Pending |
-| BOOK-03 | Phase 3 | Pending |
-| BOOK-04 | Phase 3 | Pending |
-| BOOK-05 | Phase 3 | Pending |
-| BOOK-06 | Phase 3 | Pending |
+| AUTH-01 | Phase 2 | Complete |
+| AUTH-02 | Phase 2 | Complete |
+| AUTH-03 | Phase 2 | Complete |
+| AUTH-04 | Phase 2 | Complete |
+| BOOK-01 | Phase 3 | Complete |
+| BOOK-02 | Phase 3 | Complete |
+| BOOK-03 | Phase 3 | Complete |
+| BOOK-04 | Phase 3 | Complete |
+| BOOK-05 | Phase 3 | Complete |
+| BOOK-06 | Phase 3 | Complete |
 | PAY-01 | Phase 4 | Pending |
 | PAY-02 | Phase 4 | Pending |
 | PAY-03 | Phase 4 | Pending |
 | ADMIN-01 | Phase 6 | Pending |
 | ADMIN-02 | Phase 6 | Pending |
 | ADMIN-03 | Phase 6 | Pending |
-| ADMIN-04 | Phase 3 | Pending |
-| ADMIN-05 | Phase 3 | Pending |
-| ADMIN-06 | Phase 2 | Pending |
+| ADMIN-04 | Phase 3 | Complete |
+| ADMIN-05 | Phase 3 | Complete |
+| ADMIN-06 | Phase 2 | Complete |
 | SITE-01 | Phase 1 | Complete |
 | SITE-02 | Phase 1 | Complete |
 | SITE-03 | Phase 1 | Complete |

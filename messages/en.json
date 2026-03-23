@@ -29,5 +29,53 @@
   },
   "footer": {
     "copyright": "All rights reserved"
+  },
+  "auth": {
+    "google": "Continue with Google",
+    "facebook": "Continue with Facebook",
+    "bookTitle": "Book an Appointment",
+    "signInPrompt": "Sign in to continue with your booking",
+    "authenticated": "Welcome back, {name}!",
+    "comingSoon": "Booking wizard coming soon.",
+    "signOut": "Sign out"
+  },
+  "booking": {
+    "stepDate": "Choose a date",
+    "stepTime": "Choose a time",
+    "stepService": "Choose a service",
+    "stepConfirm": "Confirm your booking",
+    "next": "Next",
+    "back": "Back",
+    "confirmBooking": "Confirm Booking",
+    "unavailable": "Unavailable",
+    "confirmationHeading": "Booking Confirmed",
+    "confirmationNextSteps": "Your appointment is reserved. Please wait for the owner to send payment details via email.",
+    "qrPlaceholder": "Payment QR will appear here once payment details are ready.",
+    "errorSlotFetch": "Couldn't load available times. Please try again.",
+    "errorConflict": "That time was just taken. Please choose another slot.",
+    "errorSubmission": "Something went wrong. Your booking was not placed. Please try again.",
+    "service": "Service",
+    "date": "Date",
+    "time": "Time",
+    "price": "Price"
+  },
+  "admin": {
+    "schedule": "Schedule",
+    "blockDate": "Block this day",
+    "unblockDate": "Unblock date",
+    "saveSchedule": "Save schedule",
+    "scheduleSaved": "Schedule saved.",
+    "scheduleSaveError": "Failed to save. Please try again.",
+    "blockDateSuccess": "Day blocked.",
+    "unblockConfirm": "Unblock {date}?",
+    "yesUnblock": "Yes, unblock",
+    "cancel": "Cancel",
+    "monday": "Monday",
+    "tuesday": "Tuesday",
+    "wednesday": "Wednesday",
+    "thursday": "Thursday",
+    "friday": "Friday",
+    "saturday": "Saturday",
+    "sunday": "Sunday"
   }
 }

@@ -29,5 +29,53 @@
   },
   "footer": {
     "copyright": "สงวนลิขสิทธิ์"
+  },
+  "auth": {
+    "google": "ดำเนินการต่อด้วย Google",
+    "facebook": "ดำเนินการต่อด้วย Facebook",
+    "bookTitle": "จองนัดหมาย",
+    "signInPrompt": "เข้าสู่ระบบเพื่อดำเนินการจอง",
+    "authenticated": "ยินดีต้อนรับกลับ {name}!",
+    "comingSoon": "ระบบจองกำลังจะมาเร็ว ๆ นี้",
+    "signOut": "ออกจากระบบ"
+  },
+  "booking": {
+    "stepDate": "เลือกวันที่",
+    "stepTime": "เลือกเวลา",
+    "stepService": "เลือกบริการ",
+    "stepConfirm": "ยืนยันการจอง",
+    "next": "ถัดไป",
+    "back": "ย้อนกลับ",
+    "confirmBooking": "ยืนยันการจอง",
+    "unavailable": "ไม่ว่าง",
+    "confirmationHeading": "จองสำเร็จ",
+    "confirmationNextSteps": "การนัดหมายของคุณได้รับการจองแล้ว กรุณารอให้เจ้าของร้านส่งรายละเอียดการชำระเงินทางอีเมล",
+    "qrPlaceholder": "QR สำหรับชำระเงินจะปรากฏที่นี่เมื่อเจ้าของร้านเตรียมข้อมูลพร้อมแล้ว",
+    "errorSlotFetch": "โหลดเวลาว่างไม่ได้ กรุณาลองใหม่อีกครั้ง",
+    "errorConflict": "เวลานี้ถูกจองไปแล้ว กรุณาเลือกเวลาอื่น",
+    "errorSubmission": "เกิดข้อผิดพลาด การจองของคุณยังไม่สำเร็จ กรุณาลองใหม่",
+    "service": "บริการ",
+    "date": "วันที่",
+    "time": "เวลา",
+    "price": "ราคา"
+  },
+  "admin": {
+    "schedule": "ตาราง",
+    "blockDate": "บล็อกวันนี้",
+    "unblockDate": "ยกเลิกการบล็อก",
+    "saveSchedule": "บันทึกตาราง",
+    "scheduleSaved": "บันทึกตารางสำเร็จ",
+    "scheduleSaveError": "บันทึกไม่สำเร็จ กรุณาลองใหม่",
+    "blockDateSuccess": "บล็อกวันสำเร็จ",
+    "unblockConfirm": "ยกเลิกบล็อก {date}?",
+    "yesUnblock": "ยกเลิกบล็อก",
+    "cancel": "ยกเลิก",
+    "monday": "จันทร์",
+    "tuesday": "อังคาร",
+    "wednesday": "พุธ",
+    "thursday": "พฤหัสบดี",
+    "friday": "ศุกร์",
+    "saturday": "เสาร์",
+    "sunday": "อาทิตย์"
   }
 }

@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-stopped_at: Completed 01-foundation/01-04-PLAN.md
-last_updated: "2026-03-22T14:57:02.786Z"
+stopped_at: "Checkpoint reached: 03-04 Task 2 human-verify pending"
+last_updated: "2026-03-23T06:51:47.743Z"
 progress:
   total_phases: 6
-  completed_phases: 1
-  total_plans: 5
-  completed_plans: 5
+  completed_phases: 3
+  total_plans: 11
+  completed_plans: 11
 ---
 
 # Project State
@@ -19,12 +19,12 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-22)
 
 **Core value:** Clients can book lash extension appointments online and pay via PromptPay, replacing manual scheduling over chat.
-**Current focus:** Phase 01 — foundation
+**Current focus:** Phase 03 — booking-core
 
 ## Current Position
 
-Phase: 2
-Plan: Not started
+Phase: 03 (booking-core) — EXECUTING
+Plan: 4 of 4
 
 ## Performance Metrics
 
@@ -50,6 +50,12 @@ Plan: Not started
 | Phase 01-foundation P02 | 3 | 2 tasks | 13 files |
 | Phase 01-foundation P03 | 8 minutes | 2 tasks | 6 files |
 | Phase 01-foundation P04 | 5 minutes | 3 tasks | 12 files |
+| Phase 02-authentication P01 | 10min | 2 tasks | 6 files |
+| Phase 02-authentication P02 | 3min | 3 tasks | 10 files |
+| Phase 03-booking-core P01 | 7min | 2 tasks | 10 files |
+| Phase 03-booking-core P03 | 2min | 2 tasks | 5 files |
+| Phase 03 P02 | 5min | 2 tasks | 7 files |
+| Phase 03 P04 | 10min | 1 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -72,6 +78,20 @@ Recent decisions affecting current work:
 - [Phase 01-foundation]: NavLink active state derived from usePathname comparison — no additional state needed
 - [Phase 01-foundation]: Lazy DB proxy in src/db/index.ts defers postgres() URL parsing to first query — prevents build-time failure when DATABASE_URL contains placeholder values
 - [Phase 01-foundation]: ServiceCard category label hardcoded as Lash Extension / ต่อขนตา — no category table in v1 schema; to be wired if categories added later
+- [Phase 02-authentication]: cookieCache NOT used in auth.ts — ensures sessions persist via DB lookup on every RSC request (AUTH-03)
+- [Phase 02-authentication]: proxy.ts uses pathname.startsWith('/api/') function guard to prevent OAuth redirect_uri_mismatch from locale prefix injection
+- [Phase 02-authentication]: drizzleAdapter usePlural:true aligns Better Auth table names with existing pluralized Drizzle table definitions
+- [Phase 02-authentication]: UserAvatar placed in Header right-side div after LocaleSwitcher — visible on all screen sizes without modifying MobileDrawer
+- [Phase 02-authentication]: lucide-react installed as dependency — required by plan for User icon fallback in avatar, was missing from project
+- [Phase 02-authentication]: Admin layout redirect not in try/catch — Next.js redirect() throws NEXT_REDIRECT internally; catch blocks would absorb the throw and break redirection
+- [Phase 03-booking-core]: Zustand 5 installed (5.0.12) — create() API compatible, no bridging needed for vitest node environment
+- [Phase 03-booking-core]: bookingSchema uses z.string().datetime() — Zod v4 still supports this on string schema
+- [Phase 03-booking-core]: Server Action boundary: always pass ISO 8601 strings, never Date objects (serialize over network)
+- [Phase 03-booking-core]: blockDate stores noon UTC (T12:00:00Z) to avoid timezone boundary issues with Thai dates
+- [Phase 03-booking-core]: Custom toggle (role=switch button) used in WeeklyHoursForm — satisfies UI-SPEC without adding new shadcn import
+- [Phase 03-booking-core]: useParams() in BlockDateForm for locale access — no locale prop, reads from route params directly
+- [Phase 03]: ISO strings reconstituted via useMemo in BookingWizard — centralizes RSC boundary crossing for Date objects
+- [Phase 03]: DateStrip and TimeSlotGrid receive pre-processed Date[] from BookingWizard orchestrator — avoids repeated ISO reconstitution in step components
 
 ### Pending Todos
 
@@ -85,6 +105,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-22T13:50:09.316Z
-Stopped at: Completed 01-foundation/01-04-PLAN.md
+Last session: 2026-03-23T06:51:44.800Z
+Stopped at: Checkpoint reached: 03-04 Task 2 human-verify pending
 Resume file: None

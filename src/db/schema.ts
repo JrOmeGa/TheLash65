@@ -6,6 +6,7 @@ import {
   pgTable,
   text,
   timestamp,
+  unique,
   uuid,
 } from 'drizzle-orm/pg-core';
 
@@ -73,6 +74,7 @@ export const bookings = pgTable(
   (table) => [
     index('bookings_user_id_idx').on(table.userId),
     index('bookings_scheduled_at_idx').on(table.scheduledAt),
+    unique('bookings_scheduled_at_unique').on(table.scheduledAt),
   ],
 );
 
@@ -100,6 +102,51 @@ export const scheduleExceptions = pgTable('schedule_exceptions', {
   exceptionDate: timestamp('exception_date', { withTimezone: true }).notNull(),
   isClosed: boolean('is_closed').default(true).notNull(),
   reason: text('reason'),
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+  updatedAt: timestamp('updated_at').defaultNow().notNull(),
+});
+
+// ────────────────────────────────────────────────────────────────────────────────
+// Accounts — Better Auth OAuth provider accounts (per D-15)
+// ────────────────────────────────────────────────────────────────────────────────
+export const accounts = pgTable('accounts', {
+  id: text('id').primaryKey(),
+  userId: text('user_id').notNull().references(() => users.id, { onDelete: 'cascade' }),
+  accountId: text('account_id').notNull(),
+  providerId: text('provider_id').notNull(),
+  accessToken: text('access_token'),
+  refreshToken: text('refresh_token'),
+  accessTokenExpiresAt: timestamp('access_token_expires_at'),
+  refreshTokenExpiresAt: timestamp('refresh_token_expires_at'),
+  scope: text('scope'),
+  idToken: text('id_token'),
+  password: text('password'),
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+  updatedAt: timestamp('updated_at').defaultNow().notNull(),
+});
+
+// ────────────────────────────────────────────────────────────────────────────────
+// Sessions — Better Auth session records (per D-15)
+// ────────────────────────────────────────────────────────────────────────────────
+export const sessions = pgTable('sessions', {
+  id: text('id').primaryKey(),
+  userId: text('user_id').notNull().references(() => users.id, { onDelete: 'cascade' }),
+  token: text('token').notNull().unique(),
+  expiresAt: timestamp('expires_at').notNull(),
+  ipAddress: text('ip_address'),
+  userAgent: text('user_agent'),
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+  updatedAt: timestamp('updated_at').defaultNow().notNull(),
+});
+
+// ────────────────────────────────────────────────────────────────────────────────
+// Verifications — Better Auth email/token verifications (per D-15)
+// ────────────────────────────────────────────────────────────────────────────────
+export const verifications = pgTable('verifications', {
+  id: text('id').primaryKey(),
+  identifier: text('identifier').notNull(),
+  value: text('value').notNull(),
+  expiresAt: timestamp('expires_at').notNull(),
   createdAt: timestamp('created_at').defaultNow().notNull(),
   updatedAt: timestamp('updated_at').defaultNow().notNull(),
 });
