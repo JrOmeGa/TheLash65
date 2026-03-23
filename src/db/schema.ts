@@ -6,6 +6,7 @@ import {
   pgTable,
   text,
   timestamp,
+  unique,
   uuid,
 } from 'drizzle-orm/pg-core';
 
@@ -73,6 +74,7 @@ export const bookings = pgTable(
   (table) => [
     index('bookings_user_id_idx').on(table.userId),
     index('bookings_scheduled_at_idx').on(table.scheduledAt),
+    unique('bookings_scheduled_at_unique').on(table.scheduledAt),
   ],
 );
 
