@@ -4,10 +4,11 @@ import type { NextRequest } from 'next/server';
 
 const intlMiddleware = createMiddleware(routing);
 
-export default function middleware(request: NextRequest) {
+export default function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
-  // Skip i18n for API routes — prevents next-intl from rewriting
-  // /api/auth/callback/google → /th/api/auth/callback/google (OAuth redirect_uri_mismatch)
+  // Skip i18n middleware for API routes (auth callbacks, webhooks, etc.)
+  // Without this guard, next-intl rewrites /api/auth/callback/google to /th/api/auth/callback/google
+  // which causes OAuth redirect_uri_mismatch errors (Research Pitfall 1)
   if (pathname.startsWith('/api/')) {
     return;
   }
